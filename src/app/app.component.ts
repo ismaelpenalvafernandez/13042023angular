@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculadora';
+
+  ngOnInit(): void{
+    throw new Error("Method not implement.");
+  }
 }

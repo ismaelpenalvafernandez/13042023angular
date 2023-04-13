@@ -1,0 +1,40 @@
+<head>
+<title>Formulario de Contacto</title>
+    </head>
+
+    <body>
+    <h1>Formulario de Contacto</h1>
+    <form>
+    <label for="email">Correo electrónico: </label><input type="email" [(ngModel)]="correo" id="email" name="email" required><br>
+    <p></p>
+    <label for="direccion">Dirección:</label><textarea [(ngModel)]="direccion" id="direccion"  name="direccion" rows="2" cols="50"></textarea><br>
+    <p></p>
+    <label for="telefono">Teléfono:</label><input type="tel" [(ngModel)]="telefono" id="telefono" name="telefono"><br>
+    <p></p>
+    
+    <label for="ciudad">Ciudad:</label><br>
+    <select id="ciudad" [(ngModel)]="ciudad "name="ciudad">
+    <option value="Madrid">Madrid</option>
+    <option value="Barcelona">Barcelona</option>
+    <option value="Malaga">Málaga</option>
+    </select><br><br>
+
+    <label>Forma de Pago:</label><br>
+    <input type="radio" id="efectivo" name="forma-pago" value="efectivo" [(ngModel)]="formadepago">
+    <label for="efectivo">Efectivo</label><br>
+
+    <input type="radio" id="tarjeta" name="forma-pago" value="tarjeta" [(ngModel)]="formadepago">
+    <label for="tarjeta">Tarjeta</label><br>
+
+    <input type="radio" id="contra-reembolso" name="forma-pago" value="contra-reembolso" [(ngModel)]="formadepago">
+    <label for="contra-reembolso">Contra-Reembolso</label><br><br>
+    
+    <input type="checkbox" id="acepta"[(ngModel)]="aceptar" name="acepta" required>
+    
+    <label for="acepta">Acepto los términos y condiciones.</label><br><br>
+    <input type="submit" value="Enviar" (click)="reconoceCosas()">
+    <br>
+    <p>RESPUESTA: </p><p>{{texto}}</p>
+    <br>    
+    </form>
+    </body>
